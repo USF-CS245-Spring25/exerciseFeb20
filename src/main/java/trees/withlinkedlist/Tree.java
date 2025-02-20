@@ -34,6 +34,10 @@ class Tree {
         printPreorder(root);
     }
 
+    public StringBuilder serialize() {
+        return serialize(root);
+    }
+
     /** Compute the number of levels in the tree with the given root
      *
      * @param node root of the tree
@@ -88,16 +92,23 @@ class Tree {
 
     /** Print the values in the tree level by level (top to bottom, left to right)
      *
-     * @param node root of the tree
      */
-    private void printByLevel(TreeNode node) {
+    public void printByLevel() {
         ArrayQueue queue = new ArrayQueue(100);
-        queue.enqueue(node);
+        queue.enqueue(root);
 
         while(!queue.empty()) {
            // FILL IN CODE
 
         }
+    }
+
+    private StringBuilder serialize(TreeNode root) {
+        StringBuilder sb = new StringBuilder();
+        // FILL IN CODE: return a string builder representing the tree
+        // traverse using preorder, print ) whenever the node has no more children
+
+        return sb;
     }
 
 
@@ -119,7 +130,7 @@ class Tree {
         node15.rightSibling = node18;
 
         TreeNode node5 = new TreeNode(5);
-        TreeNode node6= new TreeNode(6);
+        TreeNode node6 = new TreeNode(6);
         node2.leftChild = node5;
         node5.rightSibling = node6;
 
