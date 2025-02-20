@@ -3,7 +3,7 @@ package trees.withlinkedlist;
 import queues.ArrayQueue;
 
 /** A general tree */
-class Tree {
+class TreeWithLinkedListOfChildren {
     private TreeNode root;
 
     private class TreeNode {
@@ -33,6 +33,20 @@ class Tree {
     public void printPreorder() {
         printPreorder(root);
     }
+
+    /** Print the values in the tree level by level (top to bottom, left to right)
+     *
+     */
+    public void printByLevel() {
+        ArrayQueue queue = new ArrayQueue(100);
+        queue.enqueue(root);
+
+        while(!queue.empty()) {
+            // FILL IN CODE
+
+        }
+    }
+
 
     public StringBuilder serialize() {
         return serialize(root);
@@ -87,19 +101,6 @@ class Tree {
         while (curr != null)  {
             printPreorder(curr);
             curr = curr.rightSibling;
-        }
-    }
-
-    /** Print the values in the tree level by level (top to bottom, left to right)
-     *
-     */
-    public void printByLevel() {
-        ArrayQueue queue = new ArrayQueue(100);
-        queue.enqueue(root);
-
-        while(!queue.empty()) {
-           // FILL IN CODE
-
         }
     }
 

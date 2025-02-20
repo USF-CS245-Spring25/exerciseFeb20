@@ -2,7 +2,7 @@ package trees.withlinkedlist;
 
 public class Main {
     public static void main(String[] args) {
-        Tree tree = new Tree();
+        TreeWithLinkedListOfChildren tree = new TreeWithLinkedListOfChildren();
         tree.createNodes();
         tree.printPreorder();
         // tree.printByLevel();
